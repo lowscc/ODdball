@@ -11,3 +11,18 @@
     font-family:Cambria;
  }
 
+ .header-background {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Cat_August_2010-4.jpg/1200px-Cat_August_2010-4.jpg');
+    background-size: cover;    /* Ensures the image covers the entire area */
+    background-position: center; /* Center the image in the header */
+    height: 300px;              /* Set height of the header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-title {
+    color: white;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add a shadow for better readability */
+}
