@@ -1,32 +1,13 @@
-var age = 20    
-age= 65
+const quotes = [
+    "Change is the end result of all true learning.",
+    "The only limit to our realization of tomorrow is our doubts of today.",
+    "Innovation distinguishes between a leader and a follower.",
+    "Learning is a treasure that will follow its owner everywhere.",
+    "An organization's ability to learn, and translate that learning into action rapidly, is the ultimate competitive advantage."
+];
 
-var username = "clare"
-var password = "hello"
-
-var isFemale = true
-var isLoggedIn = false
-
-var blog_posts = ["Today is a good day!", "How are you?", "It is sunny."]
-
-console.log(username)
-console.log(password)
-console.log(isFemale)
-console.log(isLoggedIn)
-console.log(blog_posts)
-
-if (isFemale == true) {
-    console.log("You are female")
-} else {
-    console.log("You are not female")
+function displayQuote() {
+    const randomIndex = Math.floor(Math.random() * quotes.length);
+    const quoteDisplay = document.getElementById("quote-display");
+    quoteDisplay.textContent = quotes[randomIndex];
 }
-
-while (age < 70) {
-    console.log("Your age is " + age );
-    age = age + 1;
-}
-
-function sayHello() {
-    alert("Hello everyone");
-}
-
