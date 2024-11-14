@@ -14,8 +14,8 @@
                 <a href="index.html" class="logo">THE OD STACK</a>
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="frameworks.html" class="nav-link">Frameworks</a>
-                <a href="#" class="nav-link">Articles</a>
-                <a href="#" class="nav-link">Resources</a>
+                <a href="articles.html" class="nav-link">Articles</a>
+                <a href="resources.html" class="nav-link">Resources</a>
             </div>
             <div class="nav-right">
                 <input type="text" placeholder="Search Frameworks" class="search-bar">
@@ -31,10 +31,66 @@
         alt="stationary"/>
     </section>
 
-    <!-- Main Content -->
-    <main>
-        <section class="browse-themes">
-            <h2>Frameworks (in alphabetical order) </h2>
+     <!-- Sorting Dropdown -->
+     <div class="sorting">
+        <label for="sort">Sort frameworks by: </label>
+        <select id="sort" onchange="sortFrameworks()">
+            <option value="alphabetical">Alphabetical Order</option>
+            <option value="theme">Theme</option>
+        </select>
+    </div>
 
-        <section class="browse-themes">
-            <h2>Frameworks (by theme) </h2>
+    <!-- Framework Grid -->
+    <main>
+        <div class="framework-grid" id="framework-grid">
+            <!-- Framework Cards -->
+            <div class="framework-card" data-theme="Understanding Reality" data-name="Three-Legged Stool">
+                <img src="https://plus.unsplash.com/premium_photo-1682685341020-447c48b0c5c7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Three-Legged Stool">
+                <h3>Three-Legged Stool</h3>
+            </div>
+            <div class="framework-card" data-theme="Getting out of a Rut" data-name="Hierarchy of Choices">
+                <img src="https://plus.unsplash.com/premium_photo-1695752728004-6846d17d5a09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aGllcmFyY2h5fGVufDB8fDB8fHww" alt="Hierarchy of Choices">
+                <h3>Hierarchy of Choices</h3>
+            </div>
+            <div class="framework-card" data-theme="Getting out of a  Rut" data-name="Single-/Double-Loop Learning">
+                <img src="https://images.unsplash.com/photo-1543567160-087d03d34cf0?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="spiral stairs">
+                <h3>Single-/Double-Loop Learning</h3>
+            </div>
+            <div class="framework-card" data-theme="Getting out of a Rut" data-name="Levels of Perspective">
+                <img src="https://plus.unsplash.com/premium_photo-1692444723947-a2513975f86c?q=80&w=1898&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Levels of Perspective">
+                <h3>Levels of Perspective</h3>
+            </div>
+            <div class="framework-card" data-theme="Generative Conversations" data-name="Left Hand Column">
+                <img src="https://images.unsplash.com/photo-1580130037032-b1d3878e348b?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Left Hand Column">
+                <h3>Left Hand Column</h3>
+            </div>
+            <div class="framework-card" data-theme="Generative Conversations" data-name="4-Player Model">
+                <img src="https://plus.unsplash.com/premium_photo-1661265951476-f72c210b7e7e?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="4-Player Model">
+                <h3>4-Player Model</h3>
+            </div>
+            <div class="framework-card" data-theme="Generative Conversations" data-name="Ladder of Inference">
+                <img src="https://plus.unsplash.com/premium_photo-1670444252175-e32991ada9a0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Ladder of Inference">
+                <h3>Ladder of Inference</h3>
+            </div>
+            <div class="framework-card" data-theme="Getting out of a Rut" data-name="Creative Tension Model">
+                <img src="https://images.unsplash.com/photo-1584827386916-b5351d3ba34b?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Creative Tension Model">
+                <h3>Creative Tension Model</h3>
+            </div>
+            <div class="framework-card" data-theme="Understanding Reality" data-name="Theory of Success">
+                <img src="https://plus.unsplash.com/premium_photo-1663853492863-ea8eeebf401f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Theory of Success">
+                <h3>Theory of Success</h3>
+            </div>
+            <div class="framework-card" data-theme="Generative Conversations" data-name="Quality of Conversations">
+                <img src="https://plus.unsplash.com/premium_photo-1663051017352-b1cfc6e57dde?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Quality of Conversations">
+                <h3>Quality of Conversations</h3>
+            </div>
+            <div class="framework-card" data-theme="Understanding Reality" data-name="Total Results Triangle (PEL)">
+                <img src="https://images.unsplash.com/photo-1597505659405-067a168e54d4?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Total Results Triangle">
+                <h3>Total Results Triangle (PEL)</h3>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
