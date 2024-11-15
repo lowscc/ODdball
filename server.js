@@ -25,16 +25,14 @@ app.get('/', async function(req, res) {
     // Try-Catch for any errors
     try {
         // Get all blog posts
-        //const blogs = await prisma.post.findMany({
-        //        orderBy: [
-        //          {
-        //            id: 'desc'
-        //          }
-        //        ]
-        //});
+        const blogs = await prisma.post.findMany({
+                orderBy: [
+                  {
+                    id: 'desc'
+                  }
+                ]
+        });
 
-        const blogs = [{id: 1, title: "Hello", content: "World"}]
-        
         // Render the homepage with all the blog posts
         await res.render('pages/home', { blogs: blogs });
       } catch (error) {
